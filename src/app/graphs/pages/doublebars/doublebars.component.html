@@ -1,0 +1,16 @@
+<h1>Two graphs</h1>
+<div class="row">
+  <div class="col-md-6">
+    <app-bar-graph
+    [barChartData]="proveedoresData"
+    ></app-bar-graph>
+
+  </div>
+  <div class="col-md-6">
+    <app-bar-graph [line] = true
+    [barChartData]="productoData"
+
+    ></app-bar-graph>
+
+  </div>
+</div>

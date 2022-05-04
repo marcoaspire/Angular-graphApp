@@ -1,0 +1,22 @@
+<p>Social media users</p>
+
+<div *ngIf="doughnutChartData.datasets[0].data.length === 0; else divGraph"
+  class="alert alert-info">
+  Loading...
+</div>
+
+<div class="row">
+  <div class="col">
+    <ng-template #divGraph>
+      <div style="display: block">
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [type]="doughnutChartType">
+        </canvas>
+      </div>
+      <span class="text-primary foat-end">Data in millions of users</span>
+
+    </ng-template>
+
+  </div>
+</div>
